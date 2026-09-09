@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Сброс всех базовых настроек */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color:#fff;
+    --main-color: rgb(21, 224, 197);;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+body{
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+section{
+    min-height: 100vh;
+    padding: 100px 10% 20px;
+}
+
+/* Настройка стилей header */
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 10%;
+    background: var(--bg-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+.header .sticky{
+    border-bottom: 1px solid rgba(0, 0, 0, .2);
+}
+
+.logo{
+    font-size: 25px;
+    color: var(--main-color);
+    font-size: 600;
+    cursor: default;
+}
+
+/* Стили navbar */
+.navbar a{
+    font-size: 17px;
+    color: var(--text-color);
+    margin-left: 40px;
+    transition: .3s;
+}
+
+.navbar a:hover{
+    color: var(--main-color);
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--main-color);
+}
