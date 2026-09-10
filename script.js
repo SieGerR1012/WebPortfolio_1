@@ -36,3 +36,37 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,  // Пауза перед удалением текста
     loop: true        // Бесконечный цикл анимации
 });
+
+
+////////////////////////////////////////////////////////////////////////////
+// Подсветка активной секции в navbar
+let sections = document.querySelectorAll('section');
+let navLinks = document.querySelectorAll('header nav a');
+
+// Обработчик события прокрутки страницы
+window.onscroll = () => {
+    // Перебор секций для определения, какая секция активна
+    sections.forEach(sec => {
+        let top = window.scrollY;                    // Текущая позиция прокрутки сверху
+        let offset = sec.offsetTop - 150;            // Верх секции со смещением
+        let height = sec.offsetHeight;               // Высота секции
+        let id = sec.getAttribute('id');             // ID секции
+
+        // Если секция находится в поле зрения
+        if (top >= offset && top < offset + height) {
+            // Проходим по всем ссылкам меню:
+            navLinks.forEach(links => {
+                links.classList.remove('active');
+                // Подсвечиваем ссылку, соответствующую текущей секции
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            });
+        };
+    });
+
+    let header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 100);
+
+    // Сброс бургер-меню при прокрутке. Убирается крестик с иконки и закрывается выпадающее меню
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+};
