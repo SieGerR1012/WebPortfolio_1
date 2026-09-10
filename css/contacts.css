@@ -1,0 +1,44 @@
+.contact h2{
+    margin-bottom: 30px;
+}
+
+/* Форма обратной связи */
+.contact form{
+    max-width: 700px;      /* Максимальная ширина формы */
+    margin: 10px auto;     /* Центрирование формы */
+    text-align: center;    /* Текст по центру */
+    margin-bottom: 30px;   /* Нижний отступ */
+}
+
+.contact form .input-box{
+    display: flex;
+    justify-content: space-between; /* Поля распределяются по сторонам */
+    flex-wrap: wrap;                /* Перенос полей при нехватке места */
+}
+
+/* Стиль полей ввода и текстового поля */
+.contact form .input-box input,
+.contact form textarea{
+    width: 100%;                    /* Ширина на всю строку */
+    padding: 15px;                  /* Внутренние отступы */
+    font-size: 16px;                /* Размер текста */
+    color: var(--text-color);       /* Цвет вводимого текста */
+    background: var(--second-bg-color); /* Фон полей */
+    border-radius: 8px;             /* Скругление углов */
+    margin: 7px 0;                  /* Вертикальные отступы */
+}
+
+/* Поля ввода занимают половину строки */
+.contact form .input-box input{
+    width: 49%;
+}
+
+/* Текстовое поле для сообщения */
+.contact form textarea{
+    resize: none; /* Запрет изменения размера окна "Your Message" */
+}
+
+.contact form .btn{
+    margin-top: 20px;  /* Отступ сверху */
+    cursor: pointer;   /* Курсор-указатель */
+}

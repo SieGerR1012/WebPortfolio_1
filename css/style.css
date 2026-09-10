@@ -103,3 +103,43 @@ section{
     color: var(--main-color);
     display: none;                  /* По умолчанию скрыта */
 }
+
+/* //////////////////////////////////////////////////// */
+/* //////////////////////////////////////////////////// */
+
+/* Настройка стилей footer */
+.footer{
+    display: flex;
+    justify-content: space-between; /* Текст слева, стрелка справа */
+    align-items: center;            /* Центрирование по вертикали */
+    flex-wrap: wrap;                /* Перенос при нехватке места */
+    padding: 20px 10%;              /* Внутренние отступы */
+    background: var(--second-bg-color); /* Фон подвала */
+}
+
+/* Текст копирайта */
+.footer-text p{
+    font-size: 16px;
+}
+
+/* Кнопка прокрутки вверх */
+.footer-iconTop a{
+    display: inline-flex;
+    justify-content: center;      /* Центрирование иконки по горизонтали */
+    align-items: center;          /* Центрирование иконки по вертикали */
+    padding: 8px;                 /* Внутренние отступы */
+    background: var(--main-color);/* Фон кнопки */
+    border-radius: 8px;           /* Скругление углов */
+    transition: .5s ease;         /* Плавное изменение при наведении */
+}
+
+/* Свечение вокруг кнопки при наведении */
+.footer-iconTop a:hover{
+    box-shadow: 0 0 10px var(--main-color);
+}
+
+/* Иконка внутри кнопки */
+.footer-iconTop a i{
+    font-size: 24px;                /* Размер иконки */
+    color: var(--second-bg-color);  /* Цвет иконки */
+}
