@@ -1,0 +1,161 @@
+/* --- Экраны 1200px и меньше --- */
+@media(max-width: 1200px){
+    html{
+        font-size: 55%; /* Небольшое уменьшение базового размера шрифта */
+    }
+}
+
+/* --- Экраны 991px и меньше (планшеты) --- */
+@media(max-width: 991px){
+    /* Уменьшение боковых отступов header */
+    .header{
+        padding: 20px 3%;
+    }
+
+    /* Уменьшение боковых отступов секций */
+    section{
+        padding: 100px 3% 20px;
+    }
+
+    /* Добавление нижнего отступа секции services */
+    .services{
+        padding-bottom: 70px;
+    }
+
+    /* Добавление нижнего отступа секции portfolio */
+    .portfolio{
+        padding-bottom: 70px;
+    }
+
+    /* Убирается принудительная высота contacts */
+    .contact{
+        min-height: auto;
+    }
+
+    /* Уменьшение боковых отступов footer */
+    .footer{
+        padding: 20px 3%;
+    }
+}
+
+/* --- Экраны 768px и меньше (мобильные) --- */
+@media(max-width: 768px){
+    /* Появление иконки бургер-меню */
+    #menu-icon{
+        display: block;
+    }
+
+    /* Navbar становится выпадающим */
+    .navbar{
+        position: absolute;      /* Позиционирование относительно шапки */
+        top: 100%;               /* Сразу под шапкой */
+        left: 0;
+        width: 100%;
+        padding: 10px 3%;
+        background: var(--bg-color);               /* Фон меню */
+        border-top: 1px solid rgba(0, 0, 0, .2);   /* Верхняя граница */
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .2);  /* Тень меню */
+        display: none;           /* Меню скрыто по умолчанию */
+    }
+
+    /* Предоставление списка navbar, если активен класс .active */
+    .navbar.active{
+        display: block;
+    }
+
+    /* Вертикальное расположение пунктов навигации */
+    .navbar a{
+        display: block;
+        font-size: 20px;
+        margin: 30px 0;
+    }
+
+    /* Home — элементы в столбик */
+    .home{
+        flex-direction: column;
+    }
+
+    /* Уменьшение заголовков home */
+    .home-content h3{
+        font-size: 26px;
+    }
+
+    .home-content h1{
+        font-size: 50px;
+    }
+
+    /* Картинка home шире */
+    .home-img img{
+        width: 70vw;
+        margin-top: 40px;
+    }
+
+    /* About — колонки в обратном порядке */
+    .about{
+        flex-direction: column-reverse;
+    }
+
+    /* Картинка about шире */
+    .about img{
+        width: 70vw;
+        margin-top: 40px;
+    }
+
+    /* Уменьшение отступов заголовков секций */
+    .services h2{
+        margin-bottom: 30px;
+    }
+
+    .portfolio h2{
+        margin-bottom: 30px;
+    }
+
+    /* Portfolio — 2 колонки */
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* --- Экраны 671px и меньше --- */
+@media(max-width: 671px){
+    /* Сетка portfolio — 1 колонка */
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+}
+
+/* --- Экраны 450px --- */
+@media(max-width: 450px){
+    /* Уменьшение базовых размеров шрифта */
+    html{
+        font-size: 50%;
+    }
+
+    /* Поля формы занимают всю строку */
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+
+/* --- Экраны 365px --- */
+@media(max-width: 365px){
+    /* Картинка home во всю ширину */
+    .home-img img{
+        width: 90vw;
+    }
+
+    /* Картинка about во всю ширину */
+    .about-img img{
+        width: 90vw;
+    }
+
+    /* Footer — элементы в обратном порядке столбиком */
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer p{
+        text-align: center;
+        margin-top: 20px;
+    }
+}
