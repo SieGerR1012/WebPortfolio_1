@@ -1,0 +1,43 @@
+.services h2{
+    margin-bottom: 50px;
+}
+
+.services-container{
+    display: flex;
+    justify-content: center;        /* Центрирование по горизонтали */
+    align-items: center;            /* Центрирование по вертикали */
+    flex-wrap: wrap;                /* Перенос карточек на новую строку при нехватке места */
+    gap: 20px;                      /* Расстояние между карточками */
+}
+
+/* Анимация карточек services */
+.services-container .services-box{
+    flex: 1 1 300px;                /* Карточки растягиваются, минимальная ширина 300px */
+    background: var(--second-bg-color);
+    padding: 30px 20px 40px;        /* Внутренние отступы карточки */
+    border-radius: 20px;            /* Скругление углов */
+    text-align: center;              /* Текст по центру */
+    border: 2px solid var(--bg-color); /* Рамка карточки */
+    transition: .5s ease;           /* Плавное изменение при наведении */
+}
+
+/* Эффект при наведении на карточку */
+.services-container .services-box:hover{
+    border-color: var(--main-color); /* Рамка становится цветной */
+    transform: scale(1.02);          /* Карточка слегка увеличивается */
+}
+
+/* Иконка внутри карточки услуги */
+.services-box i{
+    font-size: 70px;                /* Размер иконки */
+    color: var(--main-color);       /* Цвет иконки */
+}
+
+.services-box h3{
+    font-size: 26px;
+}
+
+.services-box p{
+    font-size: 16px;
+    margin: 10px 0 30px;
+}

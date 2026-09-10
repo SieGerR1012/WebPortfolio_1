@@ -1,0 +1,31 @@
+/* Настройка стилей about */
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    background: var(--second-bg-color);
+}
+
+.about-img img{
+    width: 40vw;    /* Ширина 40% от ширины экрана */
+}
+
+.heading{
+    text-align: center;
+    font-size: 45px;
+}
+
+.about-contet h2{
+    text-align: left;
+    line-height: 1.2;
+}
+
+.about-contet h3{
+    font-size: 20px;
+}
+
+.about-contet p{
+    font-size: 16px;
+    margin: 20px 0 30px;    /* Отступы сверху и снизу */
+}
